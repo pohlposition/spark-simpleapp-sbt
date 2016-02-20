@@ -1,7 +1,7 @@
 //Instructions for creating this Simple App are found here:
 //  http://spark.apache.org/docs/latest/quick-start.html
 
-name := "spark-template-sbt"
+name := "spark-simpleapp-sbt"
 
 version := "1.0"
 
