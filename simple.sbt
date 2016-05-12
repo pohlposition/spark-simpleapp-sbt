@@ -9,13 +9,13 @@ scalaVersion := "2.10.5"
 //Databricks uses 2.10.5 (as of 02/12/2016)
 
 libraryDependencies += "org.apache.spark" %% "spark-hive" % "1.6.0" % "provided"
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.6.0"
-
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "1.6.0" % "provided"
+//libraryDependencies += "org.apache.spark" % "spark-mllib_2.10" % "1.6.0"
 
 // Your username to login to Databricks
 //dbcUsername := "myuser"
-
-// Your password (Can be set as an environment variable)
+//
+//libraryDependencies += "org.apache.spark" % "spark-mllib_2.10" % "1.6.0" Your password (Can be set as an environment variable)
 //dbcPassword := "mypass"
 
 // Gotcha: Setting environment variables in IDE's may differ. IDE's usually don't pick up environment variables from .bash_profile or .bashrc

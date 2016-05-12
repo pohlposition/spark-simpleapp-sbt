@@ -9,9 +9,17 @@ package com.level11data.spark.simple
 
 import org.apache.spark.SparkContext
 import org.apache.spark.sql.SQLContext
+//import org.apache.spark.sql.H
 
 object SimpleApp {
   def main(args: Array[String]) {
+    println("Arguments:")
+
+    var i = 0
+    for(a <- args) {
+      i = i+1
+      println(s"$i. $a")
+    }
 
     val sc =  SparkContext.getOrCreate()
     val sqlContext = SQLContext.getOrCreate(sc)
@@ -29,6 +37,8 @@ object SimpleApp {
     val simpleDf = simpleRdd.toDF()
 
     simpleDf.show()
+
+    simpleDf.write.mode("overwrite").saveAsTable("jp_simple_data")
   }
 }
 
